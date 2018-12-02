@@ -37,8 +37,56 @@ seleniumAddress: 'http://localhost:4444/wd/hub',
 12.5 to add autocomplete to Protractor add plugin in Eclipse MarketPlace:
 12.6 Help -> Eclipse MarketPlace -> AngularJS Eclipse 1.2.0 plugin
 12.7 rightClick on Project, Configure -> convert project to Tern Project 
-12.8 autocomplete to work with EclipseJS: browser.(here press CTRL + Space)
 
+13. JS TESTING Specificities & Peculiarities 
+13.1 JS is asyncronous: it can execute code with Promise = Pending and don't wait to 
+13.2 Promise to get Resolved of Rejected (like it is in syncronous Java or Python)
+13.3 take out anyth from Browser ARE ASYNC and don't wait for resolve which can lead to Errors
+13.4 only Actions (click, input, etc) are supporting Promises concept in Protractor
+13.5 so after Browser.get() we add .then() whatever function will be in then parensis
+13.6 will be executed AFTER the GET request
+
+
+=====================================================================
+GIT
+…create a new repository on the command line
+echo "# tests" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/UserTester115/tests.git
+git push -u origin master
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/UserTester115/tests.git
+git push -u origin master
+
+…or import code from another repository
+
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+1. Create a new repository on GitHub. To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub. 
+2. change directory to your Working Project
+3. Type git init 
+4. git add *.* (or add only relevant files to your git)
+
+5. Commit the files that you've staged in your local repository.
+git commit -m "First commit"
+# Commits the tracked changes and prepares them to be pushed to a remote repository. To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
+
+6. Copy remote repository URL field. At the top of your GitHub repository's Quick Setup page, click
+to copy the remote repository URL.
+
+7. In the Command prompt, add the URL for the remote repository where your local repository will be pushed.
+7.1 git remote add origin <copy remote repository new URL>
+# Sets the new remote
+7.2 git remote -v 
+# Verifies the new remote URL
+
+8. Push the changes in your local repository to GitHub.
+8.1 git push origin master
+# Pushes the changes in your local repository up to the remote repository you specified as the origin
 =====================================================================
 INSERT INTO celebs (id, name, age) 
 VALUES (1, 'Justin Bieber', 21);

@@ -1,7 +1,7 @@
-describe('Protractor Suite', function() {
-  it('launch app and verify title', function() {
-    browser.get('https://sharely.ch/');
-
-    expect(browser.getTitle()).toEqual('Sharely Mietplattform - Lokal mieten und vermieten');
-  });
+describe('Webpage Check Suite', function() {
+  it('Launch and verify title', function() {
+    browser.driver.get('https://sharely.ch/').then(function() {
+	expect(browser.driver.getTitle()).toEqual('Sharely Mietplattform - Lokal mieten und vermieten');	
+	});
+   });
 });

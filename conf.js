@@ -13,7 +13,8 @@ seleniumAddress: 'http://localhost:4444/wd/hub',
 
 // Spec patterns are relative to the current working directory
 // when Protractor is called
-specs: ['case02pro.js'],
+// specs: ['case01.js', 'case02pro.js'],
+specs: ['case01.js'],
 
 // Options to be passed to Jasmine.
 jasmineNodeOpts: {
